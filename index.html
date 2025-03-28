@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Dashboard</title>
+    <meta http-equiv="refresh" content="1800"> <!-- Refresh every 30 minutes for updates -->
+    <style>
+        body { margin: 0; overflow: hidden; background: black; }
+        iframe { width: 100vw; height: 100vh; border: none; }
+    </style>
+    <script>
+        // Function to update the iframe source with a unique timestamp
+        function updateIframe() {
+            var iframe = document.getElementById("slidesFrame");
+            var url = "https://docs.google.com/presentation/d/e/2PACX-1vRT65UebP7HTr_Fd7gKpB84KVzUGvcsw2e_1fiut-R0xRQ8NbRhH0PqlFc9Lj28ybGrW5eZmUldmo6Z/embed?start=true&loop=true&delayms=5000";
+            iframe.src = url + "&t=" + new Date().getTime(); // Add timestamp to force refresh
+        }
+        // Refresh iframe every minute (60 seconds = 60000)
+        setInterval(updateIframe, 35000);
+    </script>
+</head>
+<body onload="updateIframe()">
+    <iframe id="slidesFrame" src="" allowfullscreen="true"></iframe>
+</body>
+</html>
