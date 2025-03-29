@@ -15,7 +15,8 @@
             iframe.src = url + "&t=" + new Date().getTime(); // Add timestamp to force refresh
         }
         // Refresh iframe every minute (60 seconds = 60000)
-        setInterval(updateIframe, 35000);
+        // setInterval(updateIframe, 35000);
+        setInterval(updateIframe, 40000);
     </script>
 </head>
 <body onload="updateIframe()">
